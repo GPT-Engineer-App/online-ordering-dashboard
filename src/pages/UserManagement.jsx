@@ -12,9 +12,9 @@ import {
 import { Eye, Edit, Trash, UserPlus } from "lucide-react";
 
 const users = [
-  { id: 1, name: "John Doe", email: "john@example.com", role: "Admin", status: "Active" },
-  { id: 2, name: "Jane Smith", email: "jane@example.com", role: "User", status: "Active" },
-  { id: 3, name: "Bob Johnson", email: "bob@example.com", role: "User", status: "Inactive" },
+  { id: 1, name: "John Doe", email: "john@example.com", role: "Customer", status: "Active", orders: 5 },
+  { id: 2, name: "Jane Smith", email: "jane@example.com", role: "Barista", status: "Active", orders: 0 },
+  { id: 3, name: "Bob Johnson", email: "bob@example.com", role: "Customer", status: "Inactive", orders: 2 },
 ];
 
 const UserManagement = () => {
@@ -48,6 +48,7 @@ const UserManagement = () => {
             <TableHead>Email</TableHead>
             <TableHead>Role</TableHead>
             <TableHead>Status</TableHead>
+            <TableHead>Orders</TableHead>
             <TableHead>Actions</TableHead>
           </TableRow>
         </TableHeader>
@@ -59,6 +60,7 @@ const UserManagement = () => {
               <TableCell>{user.email}</TableCell>
               <TableCell>{user.role}</TableCell>
               <TableCell>{user.status}</TableCell>
+              <TableCell>{user.orders}</TableCell>
               <TableCell>
                 <div className="flex space-x-2">
                   <Button variant="outline" size="icon">

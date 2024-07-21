@@ -12,9 +12,9 @@ import {
 import { Eye, Edit, Trash } from "lucide-react";
 
 const orders = [
-  { id: 1, customer: "John Doe", date: "2023-03-01", status: "Delivered", total: "$100.00" },
-  { id: 2, customer: "Jane Smith", date: "2023-03-02", status: "Processing", total: "$75.50" },
-  { id: 3, customer: "Bob Johnson", date: "2023-03-03", status: "Shipped", total: "$200.00" },
+  { id: 1, customer: "John Doe", date: "2023-03-01", status: "Delivered", total: "$15.99", items: "Latte, Croissant" },
+  { id: 2, customer: "Jane Smith", date: "2023-03-02", status: "Processing", total: "$12.50", items: "Cappuccino, Muffin" },
+  { id: 3, customer: "Bob Johnson", date: "2023-03-03", status: "Shipped", total: "$18.75", items: "Mocha, Sandwich" },
 ];
 
 const OrderManagement = () => {
@@ -45,6 +45,7 @@ const OrderManagement = () => {
             <TableHead>Order Date</TableHead>
             <TableHead>Status</TableHead>
             <TableHead>Total Amount</TableHead>
+            <TableHead>Items</TableHead>
             <TableHead>Actions</TableHead>
           </TableRow>
         </TableHeader>
@@ -56,6 +57,7 @@ const OrderManagement = () => {
               <TableCell>{order.date}</TableCell>
               <TableCell>{order.status}</TableCell>
               <TableCell>{order.total}</TableCell>
+              <TableCell>{order.items}</TableCell>
               <TableCell>
                 <div className="flex space-x-2">
                   <Button variant="outline" size="icon">

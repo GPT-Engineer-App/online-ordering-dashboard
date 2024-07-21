@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ShoppingCart, Users, DollarSign, UserPlus } from "lucide-react";
+import { ShoppingCart, Users, DollarSign, Coffee } from "lucide-react";
 
 const DashboardCard = ({ title, value, icon }) => (
   <Card>
@@ -34,9 +34,9 @@ const Analytics = () => {
           icon={<Users className="h-4 w-4 text-muted-foreground" />}
         />
         <DashboardCard
-          title="New Users"
-          value="123"
-          icon={<UserPlus className="h-4 w-4 text-muted-foreground" />}
+          title="Coffee Varieties"
+          value="25"
+          icon={<Coffee className="h-4 w-4 text-muted-foreground" />}
         />
       </div>
       <div className="grid gap-4 md:grid-cols-2">

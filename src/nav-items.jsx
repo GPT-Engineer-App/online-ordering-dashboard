@@ -1,8 +1,9 @@
-import { Home, ShoppingCart, Users, BarChart } from "lucide-react";
+import { Home, ShoppingCart, Users, BarChart, Coffee } from "lucide-react";
 import Index from "./pages/Index.jsx";
 import OrderManagement from "./pages/OrderManagement.jsx";
 import UserManagement from "./pages/UserManagement.jsx";
 import Analytics from "./pages/Analytics.jsx";
+import CoffeeMenu from "./pages/CoffeeMenu.jsx";
 
 export const navItems = [
   {
@@ -28,5 +29,11 @@ export const navItems = [
     to: "/analytics",
     icon: <BarChart className="h-4 w-4" />,
     page: <Analytics />,
+  },
+  {
+    title: "Coffee Menu",
+    to: "/menu",
+    icon: <Coffee className="h-4 w-4" />,
+    page: <CoffeeMenu />,
   },
 ];
