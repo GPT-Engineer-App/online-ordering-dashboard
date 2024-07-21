@@ -13,11 +13,11 @@ const DashboardCard = ({ title, value, icon }) => (
   </Card>
 );
 
-const Index = () => {
+const Analytics = () => {
   return (
     <div className="p-6">
-      <h1 className="text-3xl font-bold mb-6">Dashboard</h1>
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <h1 className="text-3xl font-bold mb-6">Analytics</h1>
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mb-6">
         <DashboardCard
           title="Total Orders"
           value="1,234"
@@ -39,8 +39,30 @@ const Index = () => {
           icon={<UserPlus className="h-4 w-4 text-muted-foreground" />}
         />
       </div>
+      <div className="grid gap-4 md:grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardTitle>Order Trends</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="h-[200px] flex items-center justify-center text-muted-foreground">
+              Order trend chart placeholder
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Revenue Trends</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="h-[200px] flex items-center justify-center text-muted-foreground">
+              Revenue trend chart placeholder
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 };
 
-export default Index;
+export default Analytics;

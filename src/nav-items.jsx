@@ -1,14 +1,32 @@
-import { Home } from "lucide-react";
+import { Home, ShoppingCart, Users, BarChart } from "lucide-react";
 import Index from "./pages/Index.jsx";
+import OrderManagement from "./pages/OrderManagement.jsx";
+import UserManagement from "./pages/UserManagement.jsx";
+import Analytics from "./pages/Analytics.jsx";
 
-/**
- * Central place for defining the navigation items. Used for navigation components and routing.
- */
 export const navItems = [
   {
-    title: "Home",
+    title: "Dashboard",
     to: "/",
     icon: <Home className="h-4 w-4" />,
     page: <Index />,
+  },
+  {
+    title: "Order Management",
+    to: "/orders",
+    icon: <ShoppingCart className="h-4 w-4" />,
+    page: <OrderManagement />,
+  },
+  {
+    title: "User Management",
+    to: "/users",
+    icon: <Users className="h-4 w-4" />,
+    page: <UserManagement />,
+  },
+  {
+    title: "Analytics",
+    to: "/analytics",
+    icon: <BarChart className="h-4 w-4" />,
+    page: <Analytics />,
   },
 ];
